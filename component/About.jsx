@@ -26,7 +26,7 @@ function About() {
           lg:text-5xl
           font-bold
           text-center
-          [-webkit-text-stroke:3px_white]
+          [-webkit-text-stroke:2px_white]
           text-shadow-lg
         "
         >
@@ -78,7 +78,7 @@ function About() {
       {/* Judul Cabang */}
       <div className="mt-15 flex items-center">
 
-        <div className="hidden w-35 h-15 rounded-r-full md:flex bg-linear-to-r from-orange-300 to-pink-500"></div>
+        <div className=" w-20 lg:w-35 h-15 rounded-r-full md:flex bg-linear-to-r from-orange-300 to-pink-500"></div>
 
         <h2
           className="
@@ -103,7 +103,7 @@ function About() {
           </span>
         </h2>
 
-        <div className="hidden w-35 h-15 rounded-l-full bg-linear-to-r from-pink-500 to-orange-300 md:flex"></div>
+        <div className="w-20 lg:w-20 h-15 rounded-l-full bg-linear-to-r from-pink-500 to-orange-300 md:flex"></div>
 
       </div>
 

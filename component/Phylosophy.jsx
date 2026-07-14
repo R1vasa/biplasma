@@ -3,10 +3,10 @@ import Image from "next/image";
 function Phylosophy() {
   return (
     <>
-    <div className="relative bg-[url('/images/Filosofi-hero.svg')] bg-cover bg-center h-screen">
+    <div className="relative bg-[url('/images/Filosofi-hero.svg')] bg-cover bg-center min-h-screen">
         <div className="absolute rotate-180 top-0 left-0 w-full h-75 z-0 bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.77)_77%,rgba(255,255,255,1)_100%)]"/>
         <div className="absolute bottom-0 left-0 w-full h-75 z-0 bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.77)_77%,rgba(255,255,255,1)_100%)]"/>
-        <h1 className="text-3xl lg:text-5xl font-bold font-Starshines text-center text-shadow-lg [-webkit-text-stroke:3px_white] text-white z-10 relative pt-20">
+        <h1 className="text-3xl lg:text-5xl font-bold font-Starshines text-center text-shadow-lg [-webkit-text-stroke:2px_white] text-white z-10 relative pt-20">
           <span className="text-blue-500">FILOSOFI </span>
           <span className="text-red-500">LOGO </span>
           <span className="text-green-500">BIOPLASMA </span>
@@ -81,42 +81,162 @@ function Phylosophy() {
           </div>
         </div>
     </div>
-    <div className="relative bg-[url('/images/Background.svg')] bg-cover bg-center h-screen">
-      <div className="flex items-center justify-center mb-10">
+    <div className="relative bg-[url('/images/Background.svg')] bg-cover bg-center min-h-screen">
 
-        <div className="flex-1 h-15 rounded-r-full bg-linear-to-r from-blue-500 to-lime-500"></div>
+      {/* ===== Title ===== */}
+      <div className="flex items-center justify-center py-8 lg:py-10">
+
+        <div className="flex-1 w-20 h-15 lg:h-15 rounded-r-full bg-linear-to-r from-red-500 to-blue-500"></div>
 
         <h2
           className="
-          mx-6
-          font-Starshines
-          text-3xl
-          lg:text-5xl
-          font-bold
-          text-center
-          [-webkit-text-stroke:3px_white]
-          text-shadow-lg
-        "
+            mx-3 lg:mx-6
+            font-Starshines
+            text-center
+            text-3xl
+            lg:text-5xl
+            font-bold
+            [-webkit-text-stroke:1px_white]
+            lg:[-webkit-text-stroke:2px_white]
+            text-shadow-lg
+            leading-tight
+          "
         >
           <span className="text-orange-400">SAY </span>
-          <span className="text-green-600">HI   </span>
+          <span className="text-green-600">HI </span>
           <span className="text-red-400">TO </span>
           <span className="text-blue-500">OUR </span>
+
+          <br className="lg:hidden" />
+
           <span className="text-green-600">MASKOT </span>
-          <span className="text-blue-400">, HI  </span>
+          <span className="text-blue-400">HI </span>
           <span className="text-red-400">TRUFIO!!</span>
         </h2>
 
         <div className="flex-1 h-15 rounded-l-full bg-linear-to-r from-blue-500 to-red-500"></div>
 
       </div>
-      <div className="flex flex-col items-center justify-center mt-20 lg:mt-7 font-Starshines ">
-      <Image src="/images/Maskot.svg" alt="Trufio" width={1870} height={1000} className="flex justify-center items-center"/>
-      <h1 className="text-red-500 text-3xl lg:text-4xl font-extrabold [-webkit-text-stroke:2px_white] md:text-4xl text-shadow-lg">Trufio <span className="text-blue-500">(PENJAGA ILMU KEAJAIBAN)</span></h1>
-      <div>
-        
+
+      {/* ===== Content ===== */}
+      <div className="flex flex-col items-center mt-8 lg:mt-10 px-4 lg:px-10">
+
+        {/* ===== Maskot ===== */}
+        <div
+          className="
+            flex
+            gap-4
+            w-full
+            overflow-x-auto
+            lg:overflow-visible
+            lg:justify-center
+            pb-2
+            scrollbar-none
+          "
+        >
+          <Image
+            src="/images/Maskot_1.svg"
+            alt="Trufio"
+            width={180}
+            height={180}
+            className="shrink-0 lg:w-75"
+          />
+
+          <Image
+            src="/images/Maskot_2.svg"
+            alt="Trufio"
+            width={180}
+            height={180}
+            className="shrink-0 lg:w-75"
+          />
+
+          <Image
+            src="/images/Maskot_3.svg"
+            alt="Trufio"
+            width={180}
+            height={180}
+            className="shrink-0 lg:w-75"
+          />
+
+          <Image
+            src="/images/Maskot_1.svg"
+            alt="Trufio"
+            width={180}
+            height={180}
+            className="shrink-0 lg:w-75"
+          />
+        </div>
+
+        {/* ===== Nama ===== */}
+        <h1
+          className="
+            font-Starshines
+            mt-6
+            text-center
+            text-2xl
+            sm:text-3xl
+            lg:text-4xl
+            font-extrabold
+            text-red-500
+            [-webkit-text-stroke:1px_white]
+            text-shadow-lg
+          "
+        >
+          Trufio
+
+          <br className="lg:hidden" />
+
+          <span className="text-blue-500">
+            {" "}
+            (PENJAGA ILMU KEAJAIBAN)
+          </span>
+        </h1>
+
+        {/* ===== Deskripsi ===== */}
+        <div
+          className="
+            mt-6
+            w-full
+            max-w-6xl
+            rounded-[20px]
+            border-[3px]
+            border-white
+            bg-linear-to-t
+            from-blue-200
+            to-white
+            p-5
+            lg:px-8
+            lg:py-6
+            shadow-lg
+          "
+        >
+          <p
+            className="
+              font-Helvetica-Rounded
+              text-[#2E82E6]
+              text-sm
+              sm:text-base
+              md:text-lg
+              lg:text-xl
+              font-bold
+              leading-relaxed
+              text-justify
+            "
+          >
+            Trufio merepresentasikan sinergi antara kecerdasan sains (biologi),
+            kelestarian alam (biodiversitas), dan semangat inovasi masa depan.
+            Trufio mencerminkan karakter yang bijaksana namun tetap kreatif,
+            dinamis, dan penuh dengan ide-ide cemerlang. Burung hantu merupakan
+            simbol kebijaksanaan, rasa ingin tahu, dan pengetahuan. Warna
+            Truffula melambangkan keajaiban alam dan keberagaman hayati. Daun
+            melambangkan identitas biologi sebagai dasar ilmu, pertumbuhan,
+            dan kehidupan. Percikan cahaya melambangkan wonder, ide,
+            inspirasi, dan inovasi untuk masa depan.
+          </p>
+        </div>
+
       </div>
-      </div>
+
     </div>
     </>
   )

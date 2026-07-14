@@ -2,4 +2,6 @@
 
 @theme {
   --font-Starshines: var(--font-Starshines);
+  --font-Helvetica-Rounded: var(--font-Helvetica-Rounded);
+  --font-Poppins: var(--font-Poppins);
 }
