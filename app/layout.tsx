@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
+import { Poppins} from "next/font/google";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-poppins",
+});
 
 const Starshines = localFont({
   src: [
@@ -11,6 +18,17 @@ const Starshines = localFont({
     }
   ],
   variable: "--font-Starshines",
+});
+
+const Helvetica_Rounded = localFont({
+  src: [
+    {
+      path: "../fonts/helvetica-rounded.otf",
+      weight: "700",
+      style: "bold",
+    }
+  ],
+  variable: "--font-Helvetica-Rounded",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +44,7 @@ export default function RootLayout({
   return (
     <html
       lang="en">
-      <body className={`${Starshines.variable} min-h-full flex flex-col`}>{children}</body>
+      <body className={`${Starshines.variable} ${Helvetica_Rounded.variable} ${poppins.variable} min-h-full flex flex-col`} >{children}</body>
     </html>
   );
 }
