@@ -2,12 +2,13 @@
 
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
-import { Menu } from "lucide-react";
+import { Menu, ChevronDown } from "lucide-react";
 import Link from "next/link";
 
 function Navbar() {
 const [activeMenu, setActiveMenu] = useState(null);
 const [mobileOpen, setMobileOpen] = useState(false);
+const [mobileSubmenu, setMobileSubmenu] = useState(null);
 const menuRef = useRef(null);
 
 useEffect(() => {
@@ -24,12 +25,16 @@ useEffect(() => {
   };
 }, []);
 
+const toggleMobileSubmenu = (menu) => {
+  setMobileSubmenu(mobileSubmenu === menu ? null : menu);
+};
+
   return (
    <div className="relative flex justify-center lg:pt-8">
 
   {/* Daun kiri */}
   <Image
-    src="/images/leaf.svg"
+    src="/images/Leaf.svg"
     alt="Leaf Left"
     width={180}
     height={180}
@@ -41,25 +46,21 @@ useEffect(() => {
     <Link href="/" className="text-white text-2xl font-extrabold">
       Home
     </Link>
-    <Link href="/#about" className="text-white text-2xl font-extrabold">
-      About
-    </Link>
     <div ref={menuRef} className="flex items-center gap-25">
 
       <button
         onClick={() =>
-          setActiveMenu(activeMenu === "registered" ? null : "registered")
+          setActiveMenu(activeMenu === "about" ? null : "about")
         }
         className="flex items-center gap-2 text-white text-2xl font-extrabold cursor-pointer"
       >
-        Registered
+        About
       </button>
 
       <div
         className={`
           absolute
           top-18
-          right-30
           w-100
           bg-white
           rounded-2xl
@@ -69,7 +70,7 @@ useEffect(() => {
           transition-all
           duration-300
           ${
-            activeMenu === "registered"
+            activeMenu === "about"
               ? "opacity-100 scale-100"
               : "opacity-0 scale-95 pointer-events-none"
           }
@@ -106,6 +107,69 @@ useEffect(() => {
         </div>
       </div>
 
+      <div className="relative">
+
+        <button
+          onClick={() =>
+            setActiveMenu(activeMenu === "registered" ? null : "registered")
+          }
+          className="text-white text-2xl font-extrabold cursor-pointer"
+        >
+          Register
+        </button>
+
+        <div
+          className={`
+            absolute
+            top-14
+            left-5
+            w-100
+            bg-white
+            rounded-2xl
+            shadow-xl
+            p-3
+            transition-all
+            duration-300
+            ${
+              activeMenu === "registered"
+                ? "opacity-100 scale-100"
+                : "opacity-0 scale-95 pointer-events-none"
+            }
+          `}
+        >
+          <div className="absolute -left-8 top-3 w-5 h-5 bg-white rounded-full"></div>
+
+          <div className="space-y-3">
+
+          <Link
+            href="https://forms.gle/VqGAnNopghtxvj538"
+            className="flex items-center gap-4 text-[#FF4F6D] text-2xl font-bold hover:translate-x-2 transition"
+          >
+            <span className="w-4 h-4 rounded-full bg-[#FF4F6D]"></span>
+            Pendaftaran BPC
+          </Link>
+
+          <Link
+            href="https://forms.gle/5jLhDGkCKB2nQW1e8"
+            className="flex items-center gap-4 text-[#9E3F9A] text-2xl font-bold hover:translate-x-2 transition"
+          >
+            <span className="w-4 h-4 rounded-full bg-[#9E3F9A]"></span>
+            Pendaftaran Olimpiade Biologi
+          </Link>
+
+          <Link
+            href="https://s.ub.ac.id/pendaftaran1posdig2026"
+            className="flex items-center gap-4 text-amber-400 text-2xl font-bold hover:translate-x-2 transition"
+          >
+            <span className="w-4 h-4 rounded-full bg-amber-400"></span>
+            Pendaftaran Poster Digital
+          </Link>
+
+          </div>
+        </div>
+
+      </div>
+      
       <div className="relative">
 
         <button
@@ -190,7 +254,7 @@ useEffect(() => {
     z-50
     ${
       mobileOpen
-        ? "max-h-[500px] opacity-100"
+        ? "max-h-[800px] opacity-100"
         : "max-h-0 opacity-0"
     }
   `}
@@ -203,48 +267,111 @@ useEffect(() => {
     Home
   </Link>
 
-  <Link
-    href="/#about"
-    className="block px-8 py-4 text-xl font-bold hover:bg-gray-100"
-  >
-    About
-  </Link>
+  <button
+      onClick={() => toggleMobileSubmenu("about")}
+      className="flex items-center justify-between w-full px-8 py-4 text-xl font-bold hover:bg-gray-100"
+    >
+      About
+      <ChevronDown
+        size={20}
+        className={`transition-transform duration-300 ${
+          mobileSubmenu === "about" ? "rotate-180" : ""
+        }`}
+      />
+    </button>
+    <div
+      className={`overflow-hidden transition-all duration-300 ${
+        mobileSubmenu === "about" ? "max-h-60" : "max-h-0"
+      }`}
+    >
+      <Link
+        href="/Business-Plan-Competition"
+        className="block px-12 py-3 text-lg font-semibold text-[#FF4F6D] hover:bg-gray-100"
+      >
+        Business Plan Competition
+      </Link>
+      <Link
+        href="/Olimpiade-Biologi"
+        className="block px-12 py-3 text-lg font-semibold text-[#9E3F9A] hover:bg-gray-100"
+      >
+        Olimpiade Biologi
+      </Link>
+      <Link
+        href="/Poster-Digital"
+        className="block px-12 py-3 text-lg font-semibold text-[#F6A623] hover:bg-gray-100"
+      >
+        Poster Digital
+      </Link>
+    </div>
 
-  <Link
-    href="/registered"
-    className="block px-8 py-4 text-xl font-bold hover:bg-gray-100"
-  >
-    Registered
-  </Link>
-
-  <Link
-    href="/Business-Plan-Competition"
-    className="block px-8 py-4 text-xl font-bold text-[#FF4F6D] hover:bg-gray-100"
-  >
-    Business Plan Competition
-  </Link>
-
-  <Link
-    href="/Olimpiade-Biologi"
-    className="block px-8 py-4 text-xl font-bold text-[#9E3F9A] hover:bg-gray-100"
-  >
-    Olimpiade Biologi
-  </Link>
-
-  <Link
-    href="/Poster-Digital"
-    className="block px-8 py-4 text-xl font-bold text-[#F6A623] hover:bg-gray-100"
-  >
-    Poster Digital
-  </Link>
-
+   <button
+      onClick={() => toggleMobileSubmenu("registered")}
+      className="flex items-center justify-between w-full px-8 py-4 text-xl font-bold hover:bg-gray-100"
+    >
+      Registered
+      <ChevronDown
+        size={20}
+        className={`transition-transform duration-300 ${
+          mobileSubmenu === "registered" ? "rotate-180" : ""
+        }`}
+      />
+    </button>
+    <div
+      className={`overflow-hidden transition-all duration-300 ${
+        mobileSubmenu === "registered" ? "max-h-60" : "max-h-0"
+      }`}
+    >
+      <Link
+        href="https://forms.gle/VqGAnNopghtxvj538"
+        className="block px-12 py-3 text-lg font-semibold text-[#FF4F6D] hover:bg-gray-100"
+      >
+        Pendaftaran BPC
+      </Link>
+      <Link
+        href="https://forms.gle/5jLhDGkCKB2nQW1e8"
+        className="block px-12 py-3 text-lg font-semibold text-[#9E3F9A] hover:bg-gray-100"
+      >
+        Pendaftaran Olimpiade Biologi
+      </Link>
+      <Link
+        href="https://s.ub.ac.id/pendaftaran1posdig2026"
+        className="block px-12 py-3 text-lg font-semibold text-[#F6A623] hover:bg-gray-100"
+      >
+        Pendaftaran Poster Digital
+      </Link>
+    </div>
+    
+        <button
+      onClick={() => toggleMobileSubmenu("olimpiade")}
+      className="flex items-center justify-between w-full px-8 py-4 text-xl font-bold hover:bg-gray-100"
+    >
+      Olimpiade
+      <ChevronDown
+        size={20}
+        className={`transition-transform duration-300 ${
+          mobileSubmenu === "olimpiade" ? "rotate-180" : ""
+        }`}
+      />
+    </button>
+    <div
+      className={`overflow-hidden transition-all duration-300 ${
+        mobileSubmenu === "olimpiade" ? "max-h-40" : "max-h-0"
+      }`}
+    >
+      <Link
+        href="/Business-Plan-Competition"
+        className="block px-12 py-3 text-lg font-semibold text-[#FF4F6D] hover:bg-gray-100"
+      >
+        Click Here
+      </Link>
+    </div>
 </div>
 
 </nav>
 
   {/* Daun kanan */}
   <Image
-    src="/images/leaf.svg"
+    src="/images/Leaf.svg"
     alt="Leaf Right"
     width={180}
     height={180}

@@ -5,3 +5,8 @@
   --font-Helvetica-Rounded: var(--font-Helvetica-Rounded);
   --font-Poppins: var(--font-Poppins);
 }
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
