@@ -7,7 +7,7 @@ import Footer from '@/component/Footer'
 export default function Home() {
   return (
     <div>
-      <section className="bg-[url('/images/hero-bg.svg')] bg-cover bg-center h-screen">
+      <section className="bg-[url('/images/hero-bg.svg')] bg-cover bg-center min-h-screen">
       <Navbar/>
       <Hero/>
       </section>

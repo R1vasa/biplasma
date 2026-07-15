@@ -18,7 +18,7 @@ function Phylosophy() {
          {/* <!-- LEFT COLUMN --> */}
           <div className="space-y-8 order-2 lg:order-1">
             <div className="relative card-tail-right block">
-              <div className="bg-blue-500 text-white rounded-2xl shadow-lg p-5">
+              <div className="min-h-50 bg-blue-500 text-white rounded-2xl shadow-lg p-5">
                 <p className="font-display font-bold text-sm text-blue-500 bg-white inline-block px-2 py-0.5 rounded mb-2">
                   DAUN MELENGKUNG MENYERUPAI SEPASANG TANGAN
                 </p>
@@ -32,7 +32,7 @@ function Phylosophy() {
             </div>
       
             <div className="relative card-tail-right">
-              <div className="bg-rose-400 text-white rounded-2xl shadow-lg p-5">
+              <div className="min-h-50 bg-rose-400 text-white rounded-2xl shadow-lg p-5">
                 <p className="font-display font-bold text-sm text-red-500 bg-white inline-block px-2 py-0.5 rounded mb-2">
                   POHON TRUFFULA YANG BERPUTAR MELINGKAR
                 </p>
@@ -54,7 +54,7 @@ function Phylosophy() {
           {/* Right Column */}
           <div className="space-y-8 order-3">
             <div className="relative card-tail-left">
-              <div className="bg-emerald-600 text-white rounded-2xl shadow-lg p-5">
+              <div className="min-h-50 bg-emerald-600 text-white rounded-2xl shadow-lg p-5">
                 <p className="font-display font-bold text-sm bg-white text-emerald-600 inline-block px-2 py-0.5 rounded mb-2">
                   SEPASANG DAUN YANG MENAUNGI POHON TRUFFULA
                 </p>
@@ -68,7 +68,7 @@ function Phylosophy() {
             </div>
       
             <div className="relative card-tail-left">
-              <div className="bg-amber-400 text-white rounded-2xl shadow-lg p-5">
+              <div className="min-h-50 bg-amber-400 text-white rounded-2xl shadow-lg p-5 ">
                 <p className="font-display font-bold text-sm bg-white text-amber-500 inline-block px-2 py-0.5 rounded mb-2">
                   BINTANG EMAS DI PUSAT LOGO
                 </p>

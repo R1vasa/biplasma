@@ -47,7 +47,7 @@ export default function Footer({
           <div className="space-y-1">
 
             <a
-              href="https://instagram.com/bioplasma.2026"
+              href="https://www.instagram.com/bioplasma.2026/"
               target="_blank"
               className="flex items-center gap-2 font-bold italic hover:opacity-80"
               style={{ color: accentColor }}
@@ -57,7 +57,7 @@ export default function Footer({
             </a>
 
             <a
-              href="https://instagram.com/bioplasma.2026"
+              href="https://www.threads.com/bioplasma.2026/"
               target="_blank"
               className="flex items-center gap-2 font-bold italic hover:opacity-80"
               style={{ color: accentColor }}
