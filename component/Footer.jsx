@@ -41,7 +41,7 @@ export default function Footer({
         </div>
 
         {/* Right */}
-        <div className="font-Poppins grid grid-cols-2 gap-x-10 gap-y-2 text-sm lg:text-lg font-semibold">
+        <div className="font-Poppins grid grid-cols-2 gap-x-10 gap-y-2 text-xs lg:text-lg font-semibold">
 
           {/* Kolom kiri */}
           <div className="space-y-1">
