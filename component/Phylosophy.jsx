@@ -192,7 +192,7 @@ function Phylosophy() {
           </span>
         </h1>
 
-        {/* ===== Deskripsi ===== */}
+        {/* Deskripsi */}
         <div
           className="
             mt-6
