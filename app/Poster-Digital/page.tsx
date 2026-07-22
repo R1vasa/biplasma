@@ -161,7 +161,7 @@ function page() {
                     <a href="https://canva.link/7jttmgmzjnogxju" className="text-center text-sm lg:text-2xl">UNDUH TWIBBON</a>
                   </div>
                   <div className="bg-white text-amber-400 font-bold px-15 py-2 rounded-lg cursor-pointer hover:bg-amber-500 hover:text-white transition-colors duration-300">
-                    <a href="" className="text-center text-sm lg:text-2xl">UNDUH POSTER</a>
+                    <a href="https://drive.google.com/file/d/1-KWzOIKwihS9ru89Od1u7MuVbWZW7Nyq/view?usp=drive_link" className="text-center text-sm lg:text-2xl">UNDUH POSTER</a>
                   </div>
                 </div>
 
