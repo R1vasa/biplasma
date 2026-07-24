@@ -179,7 +179,7 @@ function page() {
 
                 <div className="flex flex-col lg:flex-row justify-center items-center gap-4 mt-4">
                   <div className="bg-white text-[#9E3F9A] font-bold px-15 py-2 rounded-lg cursor-pointer hover:bg-fuchsia-700 hover:text-white transition-colors duration-300">
-                    <a href="https://canva.link/7jttmgmzjnogxju" className="text-center text-sm lg:text-2xl">UNDUH TWIBBON</a>
+                    <a href="https://twb.nz/BIOPLASMA2026" className="text-center text-sm lg:text-2xl">UNDUH TWIBBON</a>
                   </div>
                   <div className="bg-white text-[#9E3F9A] font-bold px-15 py-2 rounded-lg cursor-pointer hover:bg-fuchsia-700 hover:text-white transition-colors duration-300">
                     <a href="https://drive.google.com/file/d/1-KWzOIKwihS9ru89Od1u7MuVbWZW7Nyq/view?usp=drive_link" className="text-center text-sm lg:text-2xl">UNDUH POSTER</a>
